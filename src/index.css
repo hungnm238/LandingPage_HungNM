@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .contact-btn:hover div {
+    @apply bg-white;
+  }
+  svg {
+    @apply transition-all duration-300 ease-linear;
+  }
+
+  .nav-items {
+    @apply before:absolute relative before:-top-1/4 before:left-1/2 before:-translate-x-1/2 before:w-5 before:h-5 before:bg-primary-moniz before:rounded-full py-10 hover:before:-top-1/10 before:transition-all before:duration-300 before:ease-linear cursor-pointer;
+  }
+
+  .nav-items-active {
+    @apply before:absolute relative before:left-1/2 before:-translate-x-1/2 before:w-5 before:h-5 before:bg-primary-moniz before:rounded-full py-10 hover:before:-top-1/10 before:transition-all before:duration-300 before:ease-linear cursor-pointer before:-top-1/10;
+  }
+}

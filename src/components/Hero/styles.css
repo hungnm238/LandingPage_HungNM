@@ -1,0 +1,147 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.banner-rotate-right-1 {
+  top: 160px;
+  right: -343px;
+  width: 543px;
+  height: 543px;
+  z-index: 2;
+  transform-origin: center bottom;
+  animation-fill-mode: both;
+  animation-name: banner3Shake;
+  animation-timing-function: ease-out;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+}
+
+.banner-rotate-right-2 {
+  top: -123px;
+  right: -300px;
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 0.502;
+  width: 750px;
+  height: 750px;
+  z-index: 3;
+  transform-origin: center bottom;
+  animation-fill-mode: both;
+  animation-name: bounce;
+  animation-timing-function: ease-out;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--moniz-base, #ffffff);
+  border-radius: 50%;
+}
+
+.banner-rotate-left-1 {
+  position: absolute;
+  top: 262px;
+  left: -213px;
+  width: 304px;
+  height: 304px;
+  z-index: 2;
+  transform-origin: center bottom;
+  animation-fill-mode: both;
+  animation-name: banner3Shake;
+  animation-timing-function: ease-out;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+}
+
+.banner-rotate-left-2 {
+  top: 435px;
+  left: -200px;
+  opacity: 0.502;
+  width: 415px;
+  height: 415px;
+  z-index: 3;
+  transform-origin: center bottom;
+  animation-fill-mode: both;
+  animation-name: bounce;
+  animation-timing-function: ease-out;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--moniz-base, #ffffff);
+  border-radius: 50%;
+}
+
+@keyframes banner3Shake {
+  0% {
+    -webkit-transform: rotate3d(0, 1, 0, 0deg);
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  30% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  60% {
+    -webkit-transform: rotate3d(1, 0, 0, 0deg);
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 1, 0, 0deg);
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+}
+
+@keyframes bounce {
+  20%,
+  53%,
+  80%,
+  0%,
+  100% {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
